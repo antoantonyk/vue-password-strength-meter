@@ -64,27 +64,8 @@ export default {
     };
   },
   watch: {
-    password(newPassword) {
-      if (!newPassword) {
-        this.passwordStrength = null;
-      } else if (newPassword && newPassword.length < this.minPasswordLength) {
-        this.passwordStrength = 0;
-      } else {
-        if (this.enableFeedback) {
-          const result = this.scoreWithFeedback(this.password);
-          this.passwordStrength = result.score;
-          this.feedback = result.feedback;
-        } else {
-          this.passwordStrength = this.score(this.password);
-          this.feedback = null;
-        }
-      }
-
-      // Only emit the passwordStrength if it changed
-      if (this.prevPasswordStrength !== this.passwordStrength) {
-        this.$emit("strengthChange", this.passwordStrength);
-        this.prevPasswordStrength = this.passwordStrength;
-      }
+    password() {
+      this.onPasswordChange();
     }
   },
   computed: {
@@ -106,7 +87,35 @@ export default {
     scoreWithFeedback(password) {
       const result = zxcvbn(password);
       return { score: result.score, feedback: result.feedback };
+    },
+    onPasswordChange() {
+      if (!this.password) {
+        this.passwordStrength = null;
+      } else if (
+        this.password &&
+        this.password.length < this.minPasswordLength
+      ) {
+        this.passwordStrength = 0;
+      } else {
+        if (this.enableFeedback) {
+          const result = this.scoreWithFeedback(this.password);
+          this.passwordStrength = result.score;
+          this.feedback = result.feedback;
+        } else {
+          this.passwordStrength = this.score(this.password);
+          this.feedback = null;
+        }
+      }
+
+      // Only emit the passwordStrength if it changed
+      if (this.prevPasswordStrength !== this.passwordStrength) {
+        this.$emit("strengthChange", this.passwordStrength);
+        this.prevPasswordStrength = this.passwordStrength;
+      }
     }
+  },
+  mounted() {
+    this.onPasswordChange();
   }
 };
 </script>

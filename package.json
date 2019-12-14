@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:lib": "npm run build -- --target lib --name VuePasswordStengthMeter src/components/PasswordStengthMeter.vue",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
