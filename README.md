@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/antoantonyk/vue-password-strength-meter.svg?branch=master)](https://travis-ci.com/antoantonyk/vue-password-strength-meter)
+
 # Password Strength Meter For Vue
 
 To display the strength of the password with a visual feedback.
@@ -21,26 +23,26 @@ How then is password strength measured? `Dropbox developed an algorithm for a re
 **Step 1:** Install vue-password-strength-meter
 
 ```sh
-npm install vue-password-strength-meter --save
+npm install v-password-strength-meter --save
 ```
 
 **Step 2:** Import Password Strength Meter into your app
 
 ```js
 ....
-import VuePasswordStrengthMeter from 'vue-password-strength-meter';
+import VPasswordStrengthMeter from 'v-password-strength-meter';
 
 export default {
   name: "app",
   components: {
-    PasswordStrengthMeter: VuePasswordStrengthMeter
+    VPasswordStrengthMeter: VPasswordStrengthMeter
   },
 ```
 
 **Step 3:** use the PasswordStrengthMeter component in your component template
 
 ```ts
-  <PasswordStrengthMeter :password="password"/>
+  <VPasswordStrengthMeter :password="password"/>
 ```
 
 ## API

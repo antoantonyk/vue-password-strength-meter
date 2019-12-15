@@ -8,23 +8,23 @@
       ></div>
     </div>
     <template v-if="enableFeedback && feedback">
-      <small class="password-feedback" v-if="feedback.warning">
-        {{ feedback.warning }}
-      </small>
+      <small class="password-feedback" v-if="feedback.warning">{{
+        feedback.warning
+      }}</small>
       <small
         class="password-suggetion"
         v-if="feedback.suggestions && feedback.suggestions.length > 0"
       >
-        <template v-for="suggetion in feedback.suggestions">
-          {{ suggetion }}
-        </template>
+        <template v-for="suggetion in feedback.suggestions">{{
+          suggetion
+        }}</template>
       </small>
     </template>
   </div>
 </template>
 
 <script>
-import * as zxcvbn from "zxcvbn";
+import zxcvbn from "zxcvbn";
 
 const defaultColours = [
   "darkred",
@@ -70,13 +70,17 @@ export default {
   },
   computed: {
     meterColor() {
-      if (!this.strength || this.strength < 0 || this.strength > 5) {
+      if (
+        !this.passwordStrength ||
+        this.passwordStrength < 0 ||
+        this.passwordStrength > 5
+      ) {
         return this.colors[0] ? this.colors[0] : this.defaultColours[0];
       }
 
-      return this.colors[this.strength]
-        ? this.colors[this.strength]
-        : this.defaultColours[this.strength];
+      return this.colors[this.passwordStrength]
+        ? this.colors[this.passwordStrength]
+        : this.defaultColours[this.passwordStrength];
     }
   },
   methods: {
