@@ -4,6 +4,9 @@ node_js:
 dist: trusty
 sudo: false
 
+env:
+  - APP_BASE_PATH: $APP_BASE_URL
+
 branches:
   only:
     - master
@@ -12,10 +15,6 @@ cache:
   directories:
     - node_modules
 
-env:
-  global:
-    APP_BASE_PATH: {{APP_BASE_URL}}
-
 install:
   - npm install
 
@@ -23,13 +22,12 @@ script:
   - npm run lint
   - npm run test:unit
   - npm run build:lib
-  - npm run build:app
-  - cp docs/index.html docs/404.html
-
+  - npm run build
+  - cp dist/index.html dist/404.html
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: docs
+  local_dir: dist
   on:
     branch: master
