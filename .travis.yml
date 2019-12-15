@@ -4,6 +4,9 @@ node_js:
 dist: trusty
 sudo: false
 
+env:
+  - APP_BASE_PATH: $APP_BASE_URL
+
 branches:
   only:
     - master
@@ -17,8 +20,9 @@ install:
 
 script:
   - npm run lint
+  - npm run test:unit
   - npm run build:lib
-  - npm run build:app
+  - npm run build
   - cp dist/index.html dist/404.html
 deploy:
   provider: pages
