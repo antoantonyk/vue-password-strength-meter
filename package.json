@@ -1,6 +1,6 @@
 {
   "name": "v-password-strength-meter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/VPasswordStrengthMeter.umd.min.js",
   "unpkg": "dist/VPasswordStrengthMeter.umd.min.js",
   "browser": {
