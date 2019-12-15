@@ -4,7 +4,7 @@
 
 To display the strength of the password with a visual feedback.
 
-[Password Strength Meter](https://www.npmjs.com/package/vue-password-strength-meter) use [zxcvbn](https://github.com/dropbox/zxcvbn) to estimate the strength of the password and also provide a visual feedback with suggestions and warning messages.
+[Password Strength Meter](https://www.npmjs.com/package/v-password-strength-meter) use [zxcvbn](https://github.com/dropbox/zxcvbn) to estimate the strength of the password and also provide a visual feedback with suggestions and warning messages.
 
 This lib was developed based on the following [tutorial](https://scotch.io/tutorials/password-strength-meter-in-angularjs).
 
@@ -15,12 +15,12 @@ How then is password strength measured? `Dropbox developed an algorithm for a re
 [See Demo Here](https://antoantonyk.github.io/vue-password-strength-meter/)
 
 ```html
-<password-strength-meter [password]="password"></password-strength-meter>
+<VPasswordStrengthMeter [password]="password"></VPasswordStrengthMeter>
 ```
 
 ## Get Started
 
-**Step 1:** Install vue-password-strength-meter
+**Step 1:** Install v-password-strength-meter
 
 ```sh
 npm install v-password-strength-meter --save
