@@ -86,6 +86,7 @@
 <script>
 import PasswordStengthMeter from "./components/PasswordStengthMeter.vue";
 
+/* eslint-disable no-console */
 export default {
   name: "app",
   components: {
