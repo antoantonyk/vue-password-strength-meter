@@ -24,6 +24,10 @@ script:
   - npm run build:lib
   - npm run build
   - cp dist/index.html dist/404.html
+
+after_script:
+  - cat ./coverage/lcov.info | coveralls
+
 deploy:
   provider: pages
   skip_cleanup: true
