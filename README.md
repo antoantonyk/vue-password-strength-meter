@@ -10,12 +10,14 @@ This lib was developed based on the following [tutorial](https://scotch.io/tutor
 
 How then is password strength measured? `Dropbox developed an algorithm for a realistic password strength estimator inspired by password crackers. This algorithm is packaged in a Javascript library called zxcvbn. In addition, the package contains a dictionary of commonly used English words, names and passwords.`
 
+Need lib for Angular 2+? [Click here](https://github.com/antoantonyk/password-strength-meter)
+
 # Demo
 
 [See Demo Here](https://antoantonyk.github.io/vue-password-strength-meter/)
 
 ```html
-<VPasswordStrengthMeter [password]="password"></VPasswordStrengthMeter>
+<VPasswordStrengthMeter :password="password"></VPasswordStrengthMeter>
 ```
 
 ## Get Started
