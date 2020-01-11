@@ -1,6 +1,6 @@
 {
   "name": "v-password-strength-meter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/VPasswordStrengthMeter.umd.min.js",
   "unpkg": "dist/VPasswordStrengthMeter.umd.min.js",
   "browser": {
@@ -36,6 +36,7 @@
     "@vue/eslint-config-prettier": "^5.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "^10.0.3",
+    "coveralls": "^3.0.9",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0",

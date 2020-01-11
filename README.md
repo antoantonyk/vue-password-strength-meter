@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.com/antoantonyk/vue-password-strength-meter.svg?branch=master)](https://travis-ci.com/antoantonyk/vue-password-strength-meter)
+[![npm version](https://badge.fury.io/js/v-password-strength-meter.svg)](https://badge.fury.io/js/v-password-strength-meter)
+[![Coverage Status](https://coveralls.io/repos/github/antoantonyk/vue-password-strength-meter/badge.svg?branch=master)](https://coveralls.io/github/antoantonyk/vue-password-strength-meter?branch=master)
 
 # Password Strength Meter For Vue
 
